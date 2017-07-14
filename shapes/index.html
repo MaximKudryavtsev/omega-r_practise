@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Draw Shapes</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <canvas id="drawingArea" class="left" width="800" height="600"></canvas>
+    <div class="info-block right">
+        <form name="shapeForm">
+            <input type="hidden" name="id" value="0" id="id" />
+            <h2>Choose the shape</h2>
+            <select name="shapeSelect" id="shapeSelect" class="form-control shape-select" >
+                <option value="circle" selected>circle</option>
+                <option value="triangle">triangle</option>
+                <option value="rectangle">rectangle</option>
+            </select>
+            <div class="form-group">
+                <label for="fillColor">fillColor</label>
+                <input class="form-control" name="fillColor" id="fillColor"/>
+            </div>
+            <div class="form-group">
+                <label for="borderColor">borderColor</label>
+                <input class="form-control" name="borderColor" id="borderColor" />
+            </div>
+            <div class="shape-block" id="circleInfo">
+                <div class="form-group">
+                    <label for="circleX">X</label>
+                    <input class="form-control" name="circleX" id="circleX"/>
+                </div>
+                <div class="form-group">
+                    <label for="circleY">Y</label>
+                    <input class="form-control" name="circleY" id="circleY"/>
+                </div>
+                <div class="form-group">
+                    <label for="radius">radius</label>
+                    <input class="form-control" name="radius" id="radius"/>
+                </div>
+            </div>
+            <div class="shape-block" id="rectangleInfo">
+                <div class="form-group col-md-6">
+                    <label for="rectangleX1">X1</label>
+                    <input class="form-control" name="rectangleX1" id="rectangleX1"/>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="rectangleY1">Y1</label>
+                    <input class="form-control" name="rectangleY1" id="rectangleY1"/>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="rectangleX2">X2</label>
+                    <input class="form-control" name="rectangleX2" id="rectangleX2"/>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="rectangleY2">Y2</label>
+                    <input class="form-control" name="rectangleY2" id="rectangleY2"/>
+                </div>
+            </div>
+            <div class="shape-block" id="triangleInfo">
+                <div class="form-group col-md-6">
+                    <label for="triangleX1">X1</label>
+                    <input class="form-control" name="triangleX1" id="triangleX1"/>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="triangleY1">Y1</label>
+                    <input class="form-control" name="triangleY1" id="triangleY1"/>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="triangleX2">X2</label>
+                    <input class="form-control" name="triangleX2" id="triangleX2"/>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="triangleY2">Y2</label>
+                    <input class="form-control" name="triangleY2" id="triangleY2"/>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="triangleX3">X3</label>
+                    <input class="form-control" name="triangleX3" id="triangleX3"/>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="triangleY3">Y3</label>
+                    <input class="form-control" name="triangleY3" id="triangleY3"/>
+                </div>
+            </div>
+            <div class="panel-body">
+                <button type="submit" class="btn btn-sm btn-primary">Add to database</button>
+                <a id="reset" class="btn btn-sm btn-primary">reset</a>
+                <a id="clear" class="btn btn-sm btn-primary">clear canvas</a>
+            </div>
+        </form>
+    </div>
+
+    <table class="table table-condensed table-striped table-bordered">
+        <thead><tr><th>Name shape</th><th>fillColor</th><th>borderColor</th><th>shapeData</th><th>Actions</th></tr></thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<script src="js/index.js"></script>
+<script src="js/draw.js"></script>
+</body>
+</html>
