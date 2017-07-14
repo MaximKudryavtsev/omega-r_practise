@@ -6,7 +6,6 @@ function GetShapes() {
         success: function (shapes) {
             var rows = "";
             $.each(shapes, function (index, shape) {
-                // добавляем полученные элементы в таблицу
                 rows += row(shape);
             });
             $("table tbody").append(rows);
@@ -36,7 +35,6 @@ function DrawShape(id, shape) {
     });
 }
 
-// Добавление пользователя
 function CreateCircle(fillColor, borderColor, shapeType) {
     var circleX = $("#circleX").val();
     var circleY =  $("#circleY").val();
@@ -114,14 +112,12 @@ function CreateTriangle(fillColor, borderColor, shapeType) {
     })
 }
 
-// сброс формы
 function reset() {
     var form = document.forms["shapeForm"];
     form.reset();
     form.elements["id"].value = 0;
 }
 
-// Удаление пользователя
 function DeleteShape(id) {
     $.ajax({
         url: "api/shapes/"+id,
@@ -189,7 +185,7 @@ var row = function (shape) {
     }
 
 };
-// сброс значений формы
+
 $("#reset").click(function (e) {
 
     e.preventDefault();
@@ -202,7 +198,6 @@ $("#clear").click(function (e) {
     ClearCanvas(ctx);
 });
 
-// отправка формы
 $("form").submit(function (e) {
     e.preventDefault();
     var id = $("#id").val();
@@ -224,7 +219,6 @@ $("form").submit(function (e) {
     console.log(shapeType);
 });
 
-// нажимаем на ссылку Удалить
 $("body").on("click", ".removeLink", function () {
     var id = $(this).data("id");
     DeleteShape(id);
@@ -235,7 +229,4 @@ $("body").on("click", ".draw", function () {
     DrawShape(id);
 });
 
-
-
-// загрузка пользователей
 GetShapes();
