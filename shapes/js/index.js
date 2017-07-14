@@ -135,9 +135,8 @@ function circleRow(shape) {
         "<td>" + shape.shapeType + "</td><td>" + shape.fillColor + "</td> <td>" + shape.borderColor + "</td>" +
         " <td>" +
         "<ul>" +
-            "<li>x: "+ shape.circleX +"</li>" +
-            "<li>y: "+ shape.circleY +"</li>" +
-            "<li>radius: "+ shape.radius +"</li>" +
+            "<li><span>x:</span> "+ shape.circleX +" <span>y:</span> "+ shape.circleY +"</li>" +
+            "<li><span>radius:</span> "+ shape.radius +"</li>" +
         "</ul>" +
         "</td>" +
         "<td><a class='removeLink' data-id='" + shape._id + "'>Delete</a> | <a class='draw' data-id='" + shape._id + "'>Draw</a></td></tr>";
@@ -148,10 +147,8 @@ function rectangleRow(shape) {
         "<td>" + shape.shapeType + "</td><td>" + shape.fillColor + "</td> <td>" + shape.borderColor + "</td>" +
         " <td>" +
         "<ul>" +
-            "<li>x1: "+ shape.rectangleX1 +"</li>" +
-            "<li>y1: "+ shape.rectangleY1 +"</li>" +
-            "<li>x2: "+ shape.rectangleX2 +"</li>" +
-            "<li>y2: "+ shape.rectangleY2 +"</li>" +
+            "<li><span>x1:</span> "+ shape.rectangleX1 + " <span>y1:</span> "+ shape.rectangleY1 +"</li>" +
+            "<li>x<span>x2:</span> "+ shape.rectangleX2 +" <span>y2:</span> "+ shape.rectangleY2 +"</li>" +
         "</ul>" +
         "</td>" +
         "<td><a class='removeLink' data-id='" + shape._id + "'>Delete</a> | <a class='draw' data-id='" + shape._id + "'>Draw</a></td></tr>";
@@ -162,12 +159,9 @@ function triangleRow(shape) {
         "<td>" + shape.shapeType + "</td><td>" + shape.fillColor + "</td> <td>" + shape.borderColor + "</td>" +
         " <td>" +
         "<ul>" +
-            "<li>x1: "+ shape.triangleX1 +"</li>" +
-            "<li>y1: "+ shape.triangleY1 +"</li>" +
-            "<li>x2: "+ shape.triangleX2 +"</li>" +
-            "<li>y2: "+ shape.triangleY2 +"</li>" +
-            "<li>x3: "+ shape.triangleX3 +"</li>" +
-            "<li>y3: "+ shape.triangleY3 +"</li>" +
+            "<li><span>x1:</span> "+ shape.triangleX1 +" <span>y1:</span> "+ shape.triangleY1 +"</li>" +
+            "<li><span>x2:</span> "+ shape.triangleX2 +" <span>y2:</span> "+ shape.triangleY2 +"</li>" +
+            "<li><span>x3:</span> "+ shape.triangleX3 +" <span>y3:</span> "+ shape.triangleY3 +"</li>" +
         "</ul>" +
         "</td>" +
         "<td><a class='removeLink' data-id='" + shape._id + "'>Delete</a> | <a class='draw' data-id='" + shape._id + "'>Draw</a></td></tr>";
